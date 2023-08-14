@@ -4,6 +4,7 @@
   --blue: #4d5ae5;
   --titel-color: #2e2f42;
   --gray: #434455;
+  --cloud: #f4f4fd;
 }
 header {
   list-style: none;
@@ -21,6 +22,56 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+}
+.studio::after {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+}
+.studio.current::after {
+  background: var(--navyblue);
+}
+.pages-box-text {
+  position: relative;
+  overflow: hidden;
+}
+.pages-box-text:hover .overlay {
+  transform: translateY(0);
+  background-color: var(--blue);
+}
+.overlay {
+  position: absolute;
+  padding: 40px 32px 164px 32px;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+  will-change: transform;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--cloud, #f4f4fd);
+  background: var(--white, #fff);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.overlay-text {
+  color: var(--cloud, #f4f4fd);
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 .list {
   list-style: none;
@@ -97,6 +148,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--titel-color);
   text-decoration: none;
+  position: relative;
 }
 .studio:hover,
 .studio:focus {
@@ -122,7 +174,17 @@ img {
   color: var(--navyblue);
 }
 .section-one {
+  max-width: 1440px;
+  margin: 0 auto;
   background-color: var(--titel-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/people-office\ 1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 188px 0;
 }
 .titel-one {
@@ -170,6 +232,7 @@ img {
 .section-twoe {
   list-style: none;
   padding: 120px 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .titel-twoe {
   margin-bottom: 8px;
@@ -367,4 +430,114 @@ section {
 }
 .header-list {
   gap: 40px;
+}
+.svg-section-twoe {
+  width: 264px;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cloud, #f4f4fd);
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+.section-five {
+  padding: 119px 0;
+  list-style: none;
+  background-color: #fff;
+}
+.titel-five {
+  margin: 0 auto;
+  margin-bottom: 72px;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--titel-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.svg-section-people {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.svg-section-five {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+  border-radius: 4px;
+  border: 1px solid#8E8F99;
+}
+.svg-section-five:hover {
+  color: #404bbf;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
+
+  transition: opacity 300ms ease-out, visibility 300ms ease-out;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-126%);
+  opacity: 1;
+  width: 408px;
+  min-height: 584px;
+
+  border-radius: 4px;
+  background: var(--dairy, #fcfcfc);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+  transition: transform 250ms ease-in 300ms, opacity 300ms ease-in 300ms;
+}
+.modal-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.modal-button-icon {
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: translateX(-50%) translateY(-250%);
+  opacity: 0;
+}
+.svg-section-four-icon {
+  fill: #8e8f99;
+}
+.titel-six {
+  color: var(--white, #fff);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
+.titel-six-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
