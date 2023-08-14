@@ -146,6 +146,10 @@ img {
   flex-wrap: wrap;
   gap: 24px;
   justify-content: space-between;
+
+  
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .studio {
   font-weight: 500;
@@ -182,7 +186,6 @@ img {
 .section-one {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--titel-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -276,9 +279,6 @@ img {
 .section-four {
   background-color: #f4f4fd;
   padding: 120px 0;
-
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .titel-four {
   margin: 0 auto;
@@ -497,12 +497,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  fill: #8e8f99;
+  color: #8e8f99;
 }
 .five-icon-li-a:hover,
 .five-icon-li-a:focus {
-  fill: var(--navyblue);
+  color: var(--navyblue);
   border-color: var(--navyblue);
+}
+.svg-section-four-icon{
+  fill: currentColor;
 }
 .backdrop {
   position: fixed;
@@ -536,6 +539,8 @@ section {
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -555,7 +560,7 @@ section {
   border: none;
 }
 .modal-button-icon {
-  fill: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button-icon:hover,
 .modal-button-icon:focus{
@@ -618,6 +623,8 @@ section {
 .social-link-li {
   width: 40px;
   height: 40px;
+
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-li-a {
   width: 100%;
@@ -634,5 +641,5 @@ section {
   background-color: var(--navyblue);
 }
 .svg-section-people-icon {
-  fill: #f3f3fd;
+  fill: #f4f4fd;
 }
