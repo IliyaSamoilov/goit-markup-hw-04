@@ -29,7 +29,7 @@ body {
   left: 0;
   position: absolute;
 
-color: var(--navyblue);
+  color: var(--navyblue);
 
   display: block;
   width: 100%;
@@ -75,9 +75,12 @@ color: var(--navyblue);
 }
 .overlay-text {
   color: var(--cloud, #f4f4fd);
+  position: absolute;
+  top: 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: -0.02em;
+  padding: 40px 32px;
 }
 .list {
   list-style: none;
@@ -146,8 +149,9 @@ img {
   flex-wrap: wrap;
   gap: 24px;
   justify-content: space-between;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
-  
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -296,6 +300,8 @@ img {
 .team {
   flex-basis: calc((100% - 24px * 3) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .div-team {
   padding: 32px 0;
@@ -344,15 +350,21 @@ img {
   color: var(--white);
   background-color: var(--navyblue);
   border: 1px solid transparent;
-  
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.portfolio-a{
+.portfolio-a {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-a:hover,
-.portfolio-a:focus{
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+.portfolio-a:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-a:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .titel-portfolio {
   font-weight: 500;
@@ -367,6 +379,10 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--gray);
+}
+.text-portfolio:hover,
+.text-portfolio:focus {
+  transform: translateY(0%);
 }
 /* delete */
 h1,
@@ -504,7 +520,7 @@ section {
   color: var(--navyblue);
   border-color: var(--navyblue);
 }
-.svg-section-four-icon{
+.svg-section-four-icon {
   fill: currentColor;
 }
 .backdrop {
@@ -517,7 +533,8 @@ section {
 
   background: var(--navyblue-modal, rgba(46, 47, 66, 0.4));
 
- transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
   position: absolute;
@@ -533,7 +550,7 @@ section {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
- transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button {
   position: absolute;
@@ -552,10 +569,11 @@ section {
   background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button:hover,
-.modal-button:focus{
+.modal-button:focus {
   background-color: var(--navyblue);
   border: none;
 }
@@ -563,7 +581,7 @@ section {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-button-icon:hover,
-.modal-button-icon:focus{
+.modal-button-icon:focus {
   fill: var(#ffffff);
 }
 .backdrop.is-hidden {
@@ -593,7 +611,7 @@ section {
   display: flex;
   gap: 16px;
 
-  ackground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-six-li {
   width: 40px;
@@ -624,7 +642,7 @@ section {
   width: 40px;
   height: 40px;
 
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-li-a {
   width: 100%;
@@ -642,4 +660,14 @@ section {
 }
 .svg-section-people-icon {
   fill: #f4f4fd;
+  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-icons {
+  margin-right: 120px;
+}
+.li-button {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
