@@ -690,6 +690,10 @@ section {
   position: relative;
   overflow: hidden;
 }
+.portfolio-box:hover,
+.portfolio-box:focus {
+  transform: translateY(0%);
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -714,7 +718,13 @@ section {
 .link:hover .overlay {
   transform: translateY(0%);
 }
-.footer-social-icons {
-  display: flex;
-  gap: 16px;
+.footer-info {
+  display: block;
+  margin-right: 120px;
+}
+.footer-container {
+  display: block;
+}
+.six-div {
+  margin-left: 120px;
 }
