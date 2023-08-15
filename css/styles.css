@@ -594,11 +594,6 @@ section {
   transform: translateX(-50%) translateY(-250%);
   opacity: 0;
 }
-.six-div {
-  display: flex;
-  align-items: baseline;
-  margin-right: 120px;
-}
 .text-six {
   font-weight: 500;
   font-size: 16px;
@@ -718,4 +713,8 @@ section {
 }
 .link:hover .overlay {
   transform: translateY(0%);
+}
+.footer-social-icons {
+  display: flex;
+  gap: 16px;
 }
