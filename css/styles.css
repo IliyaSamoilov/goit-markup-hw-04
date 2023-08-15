@@ -367,12 +367,11 @@ img {
   letter-spacing: 0.02em;
   color: var(--gray);
 }
-.text-portfolio:hover {
-  transform: translateY(0%);
-}
+.text-portfolio:hover,
 .text-portfolio:focus {
   transform: translateY(0%);
 }
+
 h1,
 h2,
 h3,
@@ -715,7 +714,7 @@ section {
   justify-content: center;
   background-color: var(--blue);
 
-  transition: transform 250ms cubuc-bezier(0.4 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4 0, 0.2, 1);
 }
 .link:hover .overlay {
   transform: translateY(0%);
