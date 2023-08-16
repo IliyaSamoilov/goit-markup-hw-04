@@ -723,6 +723,9 @@ section {
 .link:hover .overlay {
   transform: translateY(0%);
 }
+.link:focus .overlay {
+  transform: translateY(0%);
+}
 .footer-info {
   display: block;
   margin-right: 120px;
